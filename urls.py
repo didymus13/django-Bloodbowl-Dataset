@@ -6,5 +6,5 @@ race_resource = Resource(handler=RaceHandler)
 
 urlpatterns = patterns('',
    (r'race/$', race_resource),
-   (r'race/(?P<race>)/$', race_resource),
+   (r'race/(?P<race>.*)/$', race_resource),
 )

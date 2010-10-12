@@ -18,16 +18,20 @@ class Skill(models.Model):
 		ordering = ('name',)
 
 class Race (models.Model):
-	name = models.CharField("Race Team Name", max_length=32)
-	use_apoth = models.BooleanField("Apothicary Available for Hire", default=True, help_text="Undead teams can't normally use an apothicary")
-	max_rerolls = models.PositiveSmallIntegerField("Maximum Re-rolls", default=8)
-	reroll_cost = models.PositiveSmallIntegerField("Basic Reroll Cost", default=50, help_text="000")
+    name = models.CharField("Race Team Name", max_length=32)
+    slug = models.SlugField(max_length=128)
+    use_apoth = models.BooleanField("Apothicary Available for Hire", default=True, help_text="Undead teams can't normally use an apothicary")
+    max_rerolls = models.PositiveSmallIntegerField("Maximum Re-rolls", default=8)
+    reroll_cost = models.PositiveSmallIntegerField("Basic Reroll Cost", default=50, help_text="000")
 	
-	class Meta:
-		ordering = ['name']
+    class Meta:
+        ordering = ['name']
 	
-	def __unicode__(self):
-		return self.name
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return '/dataset/race/%s/' % (self.slug, )
 	
 class Position (models.Model):
 	race = models.ForeignKey(Race, related_name='positions')

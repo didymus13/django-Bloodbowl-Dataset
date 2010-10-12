@@ -21,6 +21,7 @@ class Positions_Inline(admin.TabularInline):
 
 class Race_Admin(admin.ModelAdmin):
 	inlines = [Positions_Inline]
+	prepopulated_fields = {"slug": ("name",) }
 
 admin.site.register(Race, Race_Admin)
 
