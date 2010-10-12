@@ -1,0 +1,257 @@
+[
+    {
+        "pk": 1, 
+        "model": "bb_dataset.skill_group", 
+        "fields": {
+            "name": "G"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "bb_dataset.skill_group", 
+        "fields": {
+            "name": "A"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "bb_dataset.skill_group", 
+        "fields": {
+            "name": "S"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "bb_dataset.skill_group", 
+        "fields": {
+            "name": "P"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "bb_dataset.skill_group", 
+        "fields": {
+            "name": "E"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 1, 
+            "name": "Block"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 5, 
+            "name": "Bone-head"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 2, 
+            "name": "Catch"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 2, 
+            "name": "Dodge"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 5, 
+            "name": "Loner"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 3, 
+            "name": "Mighty blow"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 4, 
+            "name": "Pass"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 1, 
+            "name": "Sure Hands"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 3, 
+            "name": "Thick skull"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "bb_dataset.skill", 
+        "fields": {
+            "skill_group": 3, 
+            "name": "Throw team-mate"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "bb_dataset.race", 
+        "fields": {
+            "reroll_cost": 50, 
+            "use_apoth": true, 
+            "name": "Human", 
+            "max_rerolls": 8, 
+            "slug": "human"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "bb_dataset.position", 
+        "fields": {
+            "normal_group": [
+                1
+            ], 
+            "ma": 6, 
+            "name": "Lineman", 
+            "ag": 3, 
+            "skills": [], 
+            "st": 3, 
+            "race": 1, 
+            "av": 8, 
+            "max_qty": 16, 
+            "double_group": [
+                2, 
+                3, 
+                4
+            ], 
+            "cost": 50
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "bb_dataset.position", 
+        "fields": {
+            "normal_group": [
+                1, 
+                3
+            ], 
+            "ma": 7, 
+            "name": "Blitzer", 
+            "ag": 3, 
+            "skills": [
+                5
+            ], 
+            "st": 3, 
+            "race": 1, 
+            "av": 8, 
+            "max_qty": 4, 
+            "double_group": [
+                2, 
+                4
+            ], 
+            "cost": 90
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "bb_dataset.position", 
+        "fields": {
+            "normal_group": [
+                1, 
+                2
+            ], 
+            "ma": 8, 
+            "name": "Catcher", 
+            "ag": 3, 
+            "skills": [
+                1, 
+                2
+            ], 
+            "st": 2, 
+            "race": 1, 
+            "av": 7, 
+            "max_qty": 4, 
+            "double_group": [
+                3, 
+                4
+            ], 
+            "cost": 70
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "bb_dataset.position", 
+        "fields": {
+            "normal_group": [
+                1, 
+                4
+            ], 
+            "ma": 6, 
+            "name": "Thrower", 
+            "ag": 3, 
+            "skills": [
+                4, 
+                3
+            ], 
+            "st": 3, 
+            "race": 1, 
+            "av": 8, 
+            "max_qty": 2, 
+            "double_group": [
+                2, 
+                3
+            ], 
+            "cost": 70
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "bb_dataset.position", 
+        "fields": {
+            "normal_group": [
+                3
+            ], 
+            "ma": 5, 
+            "name": "Ogre", 
+            "ag": 2, 
+            "skills": [
+                7, 
+                6, 
+                8, 
+                9, 
+                10
+            ], 
+            "st": 5, 
+            "race": 1, 
+            "av": 9, 
+            "max_qty": 1, 
+            "double_group": [
+                1, 
+                2, 
+                4
+            ], 
+            "cost": 140
+        }
+    }
+]
