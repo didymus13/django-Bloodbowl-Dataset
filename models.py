@@ -30,7 +30,7 @@ class Race (models.Model):
 		return self.name
 	
 class Position (models.Model):
-	race = models.ForeignKey(Race)
+	race = models.ForeignKey(Race, related_name='positions')
 	name = models.CharField(max_length=32)
 	cost = models.PositiveSmallIntegerField(help_text="k")
 	max_qty = models.PositiveSmallIntegerField("Maximum Quantity")
