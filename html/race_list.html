@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block page_title %}Supported Bloodbowl Races{% endblock%}
+
+{% block content %}
+
+{% if race_list %}
+	{% for r in race_list %}
+	<table>
+		<caption>{{r.name}}</caption>
+		<tr>
+			<th>Qty</th>
+			<th>Position</th>
+			<th>Cost</th>
+			<th>MA</th>
+			<th>ST</th>
+			<th>AG</th>
+			<th>AV</th>
+			<th>Skills</th>
+			<th>Basic</th>
+			<th>Doubles</th>
+		</tr>
+		{% for p in r.position_set.all %}
+		<tr class="{%cycle 'oddrow' 'evenrow' %}">
+			<td>0-{{p.max_qty}}</td>
+			<td>{{p.name}}</td>
+			<td>{{p.cost}} K</td>
+			<td>{{p.ma}}</td>
+			<td>{{p.st}}</td>
+			<td>{{p.ag}}</td>
+			<td>{{p.av}}</td>
+			<td>{%for s in p.skills.all %}{{s.name}}{%if not forloop.last%}, {%endif%}{%endfor%}</td>
+			<td>{%for ng in p.normal_group.all%}{{ng.name}}{%endfor%}</td>
+			<td>{%for dg in p.double_group.all%}{{dg.name}}{%endfor%}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endfor %}
+{% else %}
+<p>There are no races currently supported in this bloodbowl install. Ask your admin to add some.</p>
+{% endif %}
+
+{% endblock %}
